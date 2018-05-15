@@ -6,7 +6,7 @@ Usuario = {
     main: function () {
         // Botao cadastrar
         $('#btn_cad_usu').click(function(){
-            var url = ""+protocol+"//"+hostname+"/"+pathproj+"/usuario/cadastrar";
+            var url = ""+protocol+"//"+hostname+"/"+pathproj+"/admin/usuario/cadastrar";
             Usuario.redirect(url);
         });
 
@@ -26,8 +26,8 @@ Usuario = {
             }
         });
 
-        // Usuario Cadastrar VT Card
-        $('#frm_cad_user_vt').bootstrapValidator({
+        // Usuario Cadastrar
+        $('#frm_cad_user').bootstrapValidator({
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
@@ -105,13 +105,13 @@ Usuario = {
                     Usuario.modalMsg("Aten&ccedil;&atilde;o", data.msg);
                 }
 
-                $('#btn_cad_user_vt').removeAttr('disabled');
+                $('#btn_cad_user').removeAttr('disabled');
             }, 'json');
 
         });
 
-        // Usuario Editar VT Card
-        $('#frm_edit_user_vt').bootstrapValidator({
+        // Usuario Editar
+        $('#frm_edit_user').bootstrapValidator({
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
@@ -193,7 +193,7 @@ Usuario = {
                     Usuario.modalMsg("Aten&ccedil;&atilde;o", data.msg);
                 }
 
-                $('#btn_edit_user_vt').removeAttr('disabled');
+                $('#btn_edit_user').removeAttr('disabled');
             }, 'json');
 
         });

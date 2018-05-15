@@ -1,4 +1,4 @@
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 
     <!-- CSS Usuario -->
     <link rel="stylesheet" href="<?=base_url('assets/css/usuario.css')?>">
@@ -9,7 +9,7 @@
     <div class="wrapper">
 
         <!-- Menu -->
-        <?php require_once(APPPATH . '/views/menu_vt.php'); ?>
+        <?php require_once(APPPATH.'views/admin/menu.php'); ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -20,10 +20,10 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="<?= base_url('./main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?= base_url('./admin/main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('./usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
+                        <a href="<?= base_url('./admin/usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
                     </li>
                     <li class="active">Cadastrar</li>
                 </ol>
@@ -42,7 +42,7 @@
                                 <span class="text-danger">*</span> Campo com preenchimento obrigat&oacute;rio
                             </div>
                             
-                            <form role="form" name="frm_cad_user_vt" id="frm_cad_user_vt">
+                            <form role="form" name="frm_cad_user" id="frm_cad_user">
 
                                 <div class="box-body">
 
@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="box-footer">
-                                    <button type="submit" id="btn_cad_user_vt" name="btn_cad_user_vt" class="btn btn-success">Cadastrar</button>
+                                    <button type="submit" id="btn_cad_user" name="btn_cad_user" class="btn btn-success">Cadastrar</button>
                                     <button type="reset" id="limpar" name="limpar" class="btn btn-primary">Limpar</button>
                                 </div>
                             </form>
@@ -132,8 +132,5 @@
 
         </div>
         <!-- /.content-wrapper -->
-
-        <!-- Main Footer -->
-        <?php require_once(APPPATH . '/views/main_footer.php'); ?>
 
     </div>

@@ -7,9 +7,13 @@ Home = {
         
         // Calendario
         $("#calendario_agenda").zabuto_calendar({
-            language: "pt",
-            weekstartson: 0,
-            today: true,
+            language     : "pt",
+            weekstartson : 0,
+            today        : true,
+            ajax: {
+                url   : "./main/buscarAgenda",
+                modal : true
+            },
             nav_icon: {
                 prev: '<i class="fa fa-chevron-circle-left"></i>',
                 next: '<i class="fa fa-chevron-circle-right"></i>'

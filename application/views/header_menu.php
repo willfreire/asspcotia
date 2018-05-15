@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row ">
                 <ul class="contact-detail2 col-md-6 pull-left">
-                    <li> <a href="#" target="_blank"><i class="fa fa-mobile"></i>Telefone +55 (11) 0000-0000</a> </li>
-                    <li> <a href="#" target="_blank"><i class="fa fa-envelope-o"></i> example@gmail.com</a> </li>
+                    <li style="color: #FFF;"><i class="fa fa-mobile"></i>Telefone +55 (11) 0000-0000</li>
+                    <li style="color: #FFF;"><a href="mailto:example@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i> example@gmail.com</a></li>
                 </ul>
                 <div class="social-links col-md-6 pull-right">
                     <ul class="social-icons pull-right">
@@ -46,7 +46,7 @@
                         </ul>
                     </li>
                     <li><a href="<?=base_url('juridico')?>">Jur&iacute;dico</a></li>
-                    <li><a href="<?=base_url('noticias')?>">Not&iacute;cias</a></li>
+                    <li><a href="<?=base_url('noticia')?>">Not&iacute;cias</a></li>
                     <li><a href="<?=base_url('agenda')?>">Agenda</a></li>
                     <li><a href="<?=base_url('transparencia')?>">Transpar&ecirc;ncia</a></li>
                     <li><a href="<?=base_url('fique_socio')?>">Fique S&oacute;cio</a></li>

@@ -1,4 +1,4 @@
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 
     <!-- CSS Usuario -->
     <link rel="stylesheet" href="<?= base_url('assets/css/usuario.css') ?>">
@@ -9,7 +9,7 @@
     <div class="wrapper">
 
         <!-- Menu -->
-        <?php require_once(APPPATH . '/views/menu_vt.php'); ?>
+        <?php require_once(APPPATH.'views/admin/menu.php'); ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -20,7 +20,7 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="<?= base_url('./main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?= base_url('./admin/main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li class="active"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</li>
                 </ol>
@@ -41,7 +41,7 @@
 
                             <div class="box-body">
 
-                                <table id="tbl_user_vt" class="display" width="100%" cellspacing="0">
+                                <table id="tbl_user" class="display" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
@@ -74,14 +74,11 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <!-- Main Footer -->
-        <?php require_once(APPPATH . '/views/main_footer.php'); ?>
-
     </div>
 
     <script>
         $(document).ready(function () {
-            $('#tbl_user_vt').DataTable({
+            $('#tbl_user').DataTable({
                 "columns": [
                     {data: "nome"},
                     {data: "email"},
@@ -94,7 +91,7 @@
                 "iDisplayLength": 50,
                 "stripeClasses" : ['strip_grid_none', 'strip_grid'],
                 "ajax": {
-                    url: '<?=base_url('./usuario/buscarUsuario')?>',
+                    url: '<?=base_url('./admin/usuario/buscarUsuario')?>',
                     type: 'POST'
                 },
                 "language": {

@@ -1,9 +1,9 @@
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 
     <div class="wrapper">
 
         <!-- Menu -->
-        <?php require_once(APPPATH . '/views/menu_vt.php'); ?>
+        <?php require_once(APPPATH . '/views/admin/menu.php'); ?>
         
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -13,13 +13,10 @@
                     Quadro Geral
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="<?=base_url('./main/dashboard')?>"><i class="fa fa-dashboard"></i> Quadro Geral</a></li>
+                    <li><a href="<?=base_url('./admin/main/dashboard')?>"><i class="fa fa-dashboard"></i> Quadro Geral</a></li>
                 </ol>
             </section>
         </div>
         <!-- /.content-wrapper -->
-
-        <!-- Main Footer -->
-        <?php require_once(APPPATH . '/views/main_footer.php'); ?>
 
     </div>

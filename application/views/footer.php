@@ -56,6 +56,8 @@
         <script type="text/javascript" src="<?=base_url('scripts/js/jquery.counterup.min.js')?>"></script>
         <!-- Zabuto Calendar -->
         <script type="text/javascript" src="<?=base_url('scripts/plugins/zabuto_calendar/zabuto_calendar.min.js')?>"></script>
+        <!-- Bootstrap Datetimepicker -->
+        <script type="text/javascript" src="<?=base_url('scripts/plugins/bootstrap_datetimepicker/js/bootstrap-datetimepicker.min.js')?>"></script>
         <!-- Script Main Site -->
         <script type="text/javascript" src="<?=base_url('scripts/js/main_site.js') ?>"></script>        
 

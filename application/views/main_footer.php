@@ -20,7 +20,7 @@
                 <div class="footer-top-box">
                     <h4>Visitantes</h4>
                     <h5>
-                        <i class="fa fa-users" style="color: #77BE32"></i> <span class="counter">100</span>
+                        <i class="fa fa-users" style="color: #77BE32"></i> <span class="counter"><?=$contador->visitas?></span>
                     </h5>
                 </div>
             </div>

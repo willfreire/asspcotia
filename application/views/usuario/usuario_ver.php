@@ -1,7 +1,7 @@
 <?php
 # Dados do usuário
-$nome = isset($usuario[0]->nome) ? $usuario[0]->nome : "";
-$email = isset($usuario[0]->email) ? $usuario[0]->email : "";
+$nome   = isset($usuario[0]->nome) ? $usuario[0]->nome : "";
+$email  = isset($usuario[0]->email) ? $usuario[0]->email : "";
 $perfil = isset($perfil[0]->perfil) ? $perfil[0]->perfil : "";
 $status = isset($status[0]->status) ? $status[0]->status : "";
 ?>
@@ -12,7 +12,7 @@ $status = isset($status[0]->status) ? $status[0]->status : "";
     }
 </style>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 
     <!-- CSS Usuario -->
     <link rel="stylesheet" href="<?= base_url('assets/css/usuario.css') ?>">
@@ -23,7 +23,7 @@ $status = isset($status[0]->status) ? $status[0]->status : "";
     <div class="wrapper">
 
         <!-- Menu -->
-        <?php require_once(APPPATH . '/views/menu_vt.php'); ?>
+        <?php require_once(APPPATH.'views/admin/menu.php'); ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -34,10 +34,10 @@ $status = isset($status[0]->status) ? $status[0]->status : "";
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="<?= base_url('./main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?= base_url('./admin/main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('./usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
+                        <a href="<?= base_url('./admin/usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
                     </li>
                     <li class="active">Visualizar</li>
                 </ol>
@@ -88,8 +88,5 @@ $status = isset($status[0]->status) ? $status[0]->status : "";
 
         </div>
         <!-- /.content-wrapper -->
-
-        <!-- Main Footer -->
-        <?php require_once(APPPATH . '/views/main_footer.php'); ?>
 
     </div>

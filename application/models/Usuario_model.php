@@ -146,10 +146,10 @@ class Usuario_model extends CI_Model {
 
             foreach ($resp_dados as $value):
                 # Botao
-                $url_edit = base_url('./usuario/editar/'.$value->id_usuario_pk);
-                $url_view = base_url('./usuario/ver/'.$value->id_usuario_pk);
+                $url_edit = base_url('./admin/usuario/editar/'.$value->id_usuario_pk);
+                $url_view = base_url('./admin/usuario/ver/'.$value->id_usuario_pk);
                 $acao     = "<button type='button' class='btn btn-success btn-xs btn-acao' title='Editar Usu&aacute;rio' onclick='Usuario.redirect(\"$url_edit\")'><i class='glyphicon glyphicon-edit' aria-hidden='true'></i></button>";
-                $acao     .= "<button type='button' class='btn btn-primary btn-xs btn-acao' title='Visualizar Usu&aacute;rio' onclick='Usuario.redirect(\"$url_view\")'><i class='glyphicon glyphicon-eye-open' aria-hidden='true'></i></button>";
+                $acao     .= "<button type='button' class='btn btn-warning btn-xs btn-acao' title='Visualizar Usu&aacute;rio' onclick='Usuario.redirect(\"$url_view\")'><i class='glyphicon glyphicon-eye-open' aria-hidden='true'></i></button>";
                 # $acao        .= "<button type='button' class='btn btn-danger btn-xs' title='Excluir Usu&aacute;rio' style='margin: 3px'><i class='glyphicon glyphicon-remove' aria-hidden='true'></i></button>";
 
                 $user         = new stdClass();

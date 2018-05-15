@@ -34,6 +34,8 @@
         <link rel="stylesheet" href="<?=base_url('scripts/plugins/select2/select2.min.css')?>">
         <!-- Zabuto Calendar -->
         <link rel="stylesheet" href="<?=base_url('scripts/plugins/zabuto_calendar/zabuto_calendar.min.css')?>">
+        <!-- Bootstrap Datetimepicker -->
+        <link rel="stylesheet" href="<?=base_url('scripts/plugins/bootstrap_datetimepicker/css/bootstrap-datetimepicker.css')?>">
         <!-- animate Effect -->
         <link rel="stylesheet" href="<?=base_url('assets/css/animate.css')?>">
         <!-- Main CSS -->
@@ -42,6 +44,10 @@
         <link rel="stylesheet" href="<?=base_url('assets/css/skins/green.css')?>">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="<?=base_url('assets/css/responsive.css')?>">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="<?=base_url('assets/dist/css/AdminLTE.min.css')?>">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="<?=base_url('assets/dist/css/skins/_all-skins.min.css')?>">
 
         <!-- JavaScripts -->
         <!-- jQuery 2.2.3 -->

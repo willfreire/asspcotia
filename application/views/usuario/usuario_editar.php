@@ -7,7 +7,7 @@ $id_perfil = isset($usuario[0]->id_perfil_fk) ? $usuario[0]->id_perfil_fk : "";
 $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
 ?>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 
     <!-- CSS Usuario -->
     <link rel="stylesheet" href="<?=base_url('assets/css/usuario.css')?>">
@@ -18,7 +18,7 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
     <div class="wrapper">
 
         <!-- Menu -->
-        <?php require_once(APPPATH . '/views/menu_vt.php'); ?>
+        <?php require_once(APPPATH.'views/admin/menu.php'); ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -29,10 +29,10 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="<?= base_url('./main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?= base_url('./admin/main/dashboard') ?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('./usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
+                        <a href="<?= base_url('./admin/usuario') ?>"><i class="fa fa-user" aria-hidden="true"></i> Usu&aacute;rios</a>
                     </li>
                     <li class="active">Editar</li>
                 </ol>
@@ -51,7 +51,7 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
                                 <span class="text-danger">*</span> Campo com preenchimento obrigat&oacute;rio
                             </div>
 
-                            <form role="form" name="frm_edit_user_vt" id="frm_edit_user_vt">
+                            <form role="form" name="frm_edit_user" id="frm_edit_user">
 
                                 <div class="box-body">
 
@@ -101,7 +101,7 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
                                         </div>
                                     </div>
 
-                                    <?php if ($this->session->userdata('id_perfil_vt') == "1"): ?>
+                                    <?php if ($this->session->userdata('id_perfil') == "1"): ?>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
@@ -126,7 +126,7 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
                                         <input type="hidden" id="perfil" name="perfil" value="<?=$id_perfil?>">
                                     <?php endif; ?>
 
-                                    <?php if ($this->session->userdata('id_perfil_vt') == "1"): ?>
+                                    <?php if ($this->session->userdata('id_perfil') == "1"): ?>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
@@ -150,7 +150,7 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
 
                                 <div class="box-footer">
                                     <input type="hidden" id="id_usuario" name="id_usuario" value="<?=$id?>">
-                                    <button type="submit" id="btn_cad_user_vt" name="btn_edit_user_vt" class="btn btn-success">Alterar</button>
+                                    <button type="submit" id="btn_cad_user" name="btn_edit_user" class="btn btn-success">Alterar</button>
                                     <button type="button" id="btn_back" name="btn_back" class="btn btn-primary">Voltar</button>
                                 </div>
                             </form>
@@ -164,8 +164,5 @@ $id_status = isset($usuario[0]->id_status_fk) ? $usuario[0]->id_status_fk : "";
 
         </div>
         <!-- /.content-wrapper -->
-
-        <!-- Main Footer -->
-        <?php require_once(APPPATH . '/views/main_footer.php'); ?>
 
     </div>

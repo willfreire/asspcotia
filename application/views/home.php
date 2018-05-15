@@ -1,32 +1,41 @@
+<?php if (!empty($banner)):
+$cont = count($banner);
+?>
 <section id="slider" class="">
     <!-- Carousel -->
     <div id="main-slide" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
         <ol class="carousel-indicators visible-lg visible-md">
-            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-            <li data-target="#main-slide" data-slide-to="1"></li>
+            <?php for ($i=0; $i<$cont; $i++):?>
+            <li data-target="#main-slide" data-slide-to="<?=$i?>" <?=$i==0 ? 'class="active"' : ''?>></li>
+            <?php endfor; ?>
         </ol><!--/ Indicators end-->
 
-        <!-- Carousel inner -->
         <div class="carousel-inner">
 
-            <div class="item active" style="background-image: url('<?=base_url('assets/imgs/asspcotia_membros.jpg')?>')">
-                <div class="slider-content text-left">
-                    <div class="col-md-12">
-                        <h3 class="slide-sub-title effect3">Membros da ASSPCotia</h3>
-                    </div>
-                </div>
-            </div><!--/ Carousel item 1 end -->
-
-            <div class="item" style="background-image: url('<?=base_url('assets/imgs/reuniao_comissao_saude.jpg')?>')">
+            <?php foreach ($banner as $vl): ?>
+            <div class="item" style="background-image: url('<?=base_url('assets/imgs/banners/'.$vl->img)?>')">
                 <div class="slider-content">
-                    <div class="col-md-12 text-center">
-                        <h2 class="slide-title effect4">Reuni&atilde;o</h2>
-                        <h3 class="slide-sub-title effect5">Comiss&atilde;o da Sa&uacute;de</h3>
+                    <div class="col-md-12 <?=$vl->pos_elem?>">
+                        <?php if ($vl->title != ""): ?>
+                        <h2 class="slide-sub-title effect5"><?=$vl->title?></h2>
+                        <?php endif; ?>
+                        <?php if ($vl->subtitle != ""): ?>
+                        <h3 class="slide-title effect4"><?=$vl->subtitle?></h3>
+                        <?php endif; ?>
+                        <?php if ($vl->description != ""): ?>
+                        <p class="slider-description lead effect3"><?=$vl->description?></p>
+                        <?php endif; ?>
+                        <?php if ($vl->btn_link != "" && $vl->btn_text != ""): ?>
+                        <p class="effect3">
+                            <a href="<?=base_url($vl->btn_link)?>" class="slider btn btn-primary"><?=$vl->btn_text?></a>
+                        </p>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div><!--/ Carousel item 2 end -->
+            </div>
+            <?php endforeach;?>
 
         </div><!-- Carousel inner end-->
 
@@ -39,6 +48,7 @@
         </a>
     </div><!--/ Carousel end -->
 </section>
+<?php endif; ?>
 <section id="section2" class="section-margine">
     <div class="container">
         <div class="row">
